@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const user = require('/router/user');
-//const { schema } = require('joi/lib/types/object');
+
+router.use(express.json());
 
 
-//router.user('/api/users', users);
+const user = require('/routes/user');
 
 const users = [
     {id: 1, name: ' Francis'},
@@ -28,6 +28,10 @@ router.post('/', (req, res) => {
     users.push(user);
     res.send(user);
 });
+
+router.get('/', (req, res) => {
+    res.send(users);
+})
 
 router.get('/:id', (req, res) => {
     const user = users.find(c => c.id === parseInt(req.params.id));

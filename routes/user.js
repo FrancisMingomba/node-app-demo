@@ -1,4 +1,4 @@
-
+/*
 const Joi = require('joi');
 const express = require('express');
 const router = express.Router();
@@ -20,6 +20,7 @@ router.post('/', (req, res) => {
     };
     users.push(user);
     res.send(user);
+   
 });
 
 router.get('/', (req, res) => {
@@ -67,4 +68,4 @@ function validateUser(user){
 module.exports = router;
 
 
-
+*/

@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 const users = [
-    {id: 1, name: ' Francis', email: 'Mingo', phoneNumber: '904483'}
+    {id: 1, name: ' Aurelie', email: 'Kalonga', phoneNumber: '904483'}
   
 ];
 

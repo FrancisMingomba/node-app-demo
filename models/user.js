@@ -1,7 +1,9 @@
 const Joi = require('joi');
 const mongoose = require('mongoose');
 
-
+mongoose.connect('mongodb://localhost:27017/test')
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.log('Could not connect to mongoDB...' , err));
 
 const User = mongoose.model('User', new mongoose.Schema({
     name:{

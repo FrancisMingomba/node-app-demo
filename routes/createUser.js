@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
 
     res.send( _.pick(user, ['_id','name', 'email']));
    
-    res.send(user);
+    //res.send(user);
 
 });
 

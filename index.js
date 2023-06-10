@@ -4,11 +4,12 @@ const express = require('express');
 const logger = require('./logger');
 const app = express();
 const createUser = require('./routes/createUser');
+const auth = require('./routes/auth');
 
 app.use(express.json());
 app.use('/api/createUser', createUser);
+app.use('/api/auth', auth);
 
 
-//PORT
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listenig to port ${port}...`));
